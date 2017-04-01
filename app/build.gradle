@@ -1,0 +1,46 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion "25.0.2"
+    defaultConfig {
+        applicationId "com.jal.flyreading"
+        minSdkVersion 19
+        targetSdkVersion 25
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile 'com.android.support:appcompat-v7:25.1.0'
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:cardview-v7:25.1.0'
+    compile 'com.android.support:design:25.1.0'
+    compile 'com.android.support:recyclerview-v7:25.1.0'
+    compile 'com.google.code.gson:gson:2.2.4'
+    compile 'com.squareup.okhttp:okhttp:2.0.0'
+    compile 'com.jakewharton:butterknife-parent:7.0.1'
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+    //preference screen 设置和关于页面配置
+    compile 'com.android.support:preference-v14:25.1.0'
+    //支持Chrome Custom Tabs
+//    compile 'com.android.support.customtabs:25.1.0'
+    //为了保持在低版本Sdk中的UI的一致性，引入material date time picker库
+    compile 'com.wdullaer:materialdatetimepicker:2.5.0'
+
+    compile 'com.lzy.net:okgo:2.1.4'        //可以单独使用，不需要依赖下方的扩展包
+    compile 'com.lzy.net:okrx:0.1.2'        //RxJava扩展支持，根据需要添加
+    compile 'com.lzy.net:okserver:1.1.3'    //下载管理和上传管理扩展，根据需要添加
+}
