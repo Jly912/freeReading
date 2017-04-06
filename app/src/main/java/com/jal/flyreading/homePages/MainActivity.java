@@ -1,7 +1,9 @@
-package com.jal.flyreading;
+package com.jal.flyreading.homePages;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import com.jal.flyreading.R;
 
 public class MainActivity extends AppCompatActivity {
 

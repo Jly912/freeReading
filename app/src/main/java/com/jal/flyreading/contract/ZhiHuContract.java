@@ -2,6 +2,7 @@ package com.jal.flyreading.contract;
 
 import com.jal.flyreading.base.BasePresenter;
 import com.jal.flyreading.base.BaseView;
+import com.jal.flyreading.bean.ZhiHuDailyNewsEntity;
 
 import java.util.ArrayList;
 
@@ -10,7 +11,7 @@ import java.util.ArrayList;
  * 契约类，用于统一管理View和Presenter
  */
 
-public interface MyContract {
+public interface ZhiHuContract {
 
     interface View extends BaseView<Presenter> {
 
@@ -24,7 +25,7 @@ public interface MyContract {
         void stopLoading();
 
         // 成功获取到数据后，在界面中显示
-        void showResults(ArrayList<Object> list);
+        void showResults(ArrayList<ZhiHuDailyNewsEntity.StoriesBean> list);
 
         // 显示用于加载指定日期的date picker dialog
         void showPicDialog();
