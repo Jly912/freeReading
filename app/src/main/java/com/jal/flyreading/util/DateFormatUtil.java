@@ -10,14 +10,14 @@ import java.util.Date;
 
 public class DateFormatUtil {
 
-    public String zhuHuDailyDateFormart(long date) {
+    public static String zhuHuDailyDateFormart(long date) {
         Date d = new Date(date + 24 * 60 * 60 * 1000);
         SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMdd");
         String format = sdf.format(d);
         return format;
     }
 
-    public String douBanDateFormart(long date) {
+    public static String douBanDateFormart(long date) {
         Date d = new Date(date);
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
         String format = sdf.format(d);

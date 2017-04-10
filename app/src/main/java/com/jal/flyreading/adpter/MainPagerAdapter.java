@@ -24,6 +24,17 @@ public class MainPagerAdapter extends FragmentPagerAdapter {
     private GuokrFragment guokrFragment;
     private DoubanFragment doubanFragment;
 
+    public ZhiHuDailyFragment getZhiHuDailyFragment() {
+        return zhiHuDailyFragment;
+    }
+
+    public GuokrFragment getGuokrFragment() {
+        return guokrFragment;
+    }
+
+    public DoubanFragment getDoubanFragment() {
+        return doubanFragment;
+    }
 
     public MainPagerAdapter(FragmentManager fm, Context context,
                             ZhiHuDailyFragment zhiHuDailyFragment,
